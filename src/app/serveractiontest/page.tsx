@@ -1,3 +1,4 @@
+/*
 import {addPost, deletePost} from "@/lib/action";
 
 export default function ServerActionTestPage() {
@@ -17,4 +18,4 @@ export default function ServerActionTestPage() {
             </form>
         </div>
     );
-}
+}*/
