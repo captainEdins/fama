@@ -5,7 +5,7 @@ import {Suspense} from "react";
 import {getPost} from "@/lib/data";
 
 async function getData(slug : any) {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+    const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
     if (!res.ok) {
         throw new Error("Something went wrong");
@@ -28,7 +28,8 @@ export default async function SinglePostPage({params} : any) {
     const {slug} = params;
 
     // FETCH DATA WITH AN API
-    const posts = await getPost(slug);
+    const posts = await getData(slug);
+    //const posts = await getPost(slug);
 
 
     // FETCH DATA WITHOUT AN API

@@ -3,7 +3,7 @@ import PostCard from "@/componets/postCard/postCard";
 import {getPosts} from "@/lib/data";
 
 async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts",{next:{revalidate:3600}});
+  const res = await fetch("http://localhost:3000/api/blog",{next:{revalidate:3600}});
 
     if (!res.ok) {
         throw new Error("Something went wrong");
@@ -14,7 +14,8 @@ async function getData() {
 export default async function BlogPage() {
 
     // FETCH DATA WITH AN API
-    const posts = await getPosts();
+    const posts = await getData();
+    //const posts = await getPosts();
     // FETCH DATA WITHOUT AN API
 
     return (

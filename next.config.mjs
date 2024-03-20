@@ -13,6 +13,10 @@ const nextConfig = {
             {
                 protocol :'http',
                 hostname : "www.pexels.com"
+            },
+            {
+                protocol :'https',
+                hostname : "avatars.githubusercontent.com"
             }
         ]
     }
